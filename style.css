@@ -1,102 +1,122 @@
+/* Base Styles */
 body {
     background-color: #121826;
-    /* justify-content: center; */
     background-image: url("Background_image@2x.png");
-}
-
-.heading{
+    margin: 0;
+    padding: 0;
+    }
+  
+  /* Heading Section */
+  .heading {
     color: white;
     text-align: center;
-    align-items: center;
-    height: 150px;
-}
-
-.d{
+    padding: 40px 20px;
+  }
+  
+  .heading h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  .heading p {
+    color: #9DA3AE;
+    margin: 10px 0 0 0;
+  }
+  
+  /* Container for all cards */
+  .d {
     display: flex;
-    justify-content: space-evenly;
-}
-
-.boxes{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Boxes (Cards) */
+  .boxes {
     background-color: #232a36;
-    border-radius: 4%;
-    height: 550px;
-    width: 23%;
-}
-
-.ba{
+    border-radius: 20px;
+    padding: 25px;
+    color: white;
+    flex: 1 1 300px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Emoji Icon */
+  .ba, .bb, .bc {
     border: 2px solid black;
-    border-radius: 100%;
+    border-radius: 50%;
     width: 50px;
     height: 50px;
-    margin-top: 25px;
     background-color: #FCEED8;
     justify-content: center;
     align-items: center;
     display: flex;
     font-size: 170%;
-}
-
-.bb{
-    border: 2px solid black;
-    border-radius: 100%;
-    width: 50px;
-    height: 50px;
-    margin-top: 25px;
-    background-color: #DEE9FC;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    font-size: 150%;
-}
-
-.bc{
-    border: 2px solid black;
-    border-radius: 100%;
-    width: 50px;
-    height: 50px;
-    margin-top: 25px;
-    background-color: #FBE5E6;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    font-size: 170%;
-}
-
-.b1{
-    color: white;
-    padding-left: 25px;
-}
-
-.bg1{
-    border-radius: 4%;
-    width: 325px;
-    height: 270px;
+    margin-bottom: 20px;
+  }
+  
+  /* Custom emoji backgrounds */
+  .bb { background-color: #DEE9FC; font-size: 150%; }
+  .bc { background-color: #FBE5E6; font-size: 170%; }
+  
+  /* Card Content Text */
+  .boxes h1 {
+    font-size: 1.3rem;
+    margin: 0 0 10px 0;
+  }
+  
+  .boxes p {
+    color: #9DA3AE;
+    margin: 0 0 20px 0;
+    font-size: 0.95rem;
+  }
+  
+  /* Background Images */
+  .bg1, .bg2, .bg3 {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px 12px 12px 12px;
+  }
+  
+  .bg1 {
     background-image: url(photo_2@2x.png);
-    background-size: cover;
-}
-
-.bg2{
-    border-radius: 4%;
-    width: 325px;
-    height: 270px;
+  }
+  
+  .bg2 {
     background-image: url(photo_1@2x.png);
-    background-size: cover;
-}
-
-.b2{
-    color: white;
-    padding-left: 25px;
-}
-
-.b3{
-    color: white;
-    padding-left: 25px;
-}
-
-.bg3{
-    border-radius: 4%;
-    width: 325px;
-    height: 270px;
+  }
+  
+  .bg3 {
     background-image: url(photo_3@2x.png);
-    background-size: cover;
-}
+  }
+  
+  /* ✅ Responsive Magic with Media Query */
+  @media (max-width: 768px) {
+    .boxes {
+      flex: 1 1 90%;
+      max-width: 90%;
+    }
+  
+    .bg1, .bg2, .bg3 {
+      height: 300px;
+    }
+  
+    .heading h1 {
+      font-size: 1.5rem;
+    }
+  
+    .boxes h1 {
+      font-size: 1.1rem;
+    }
+  
+    .boxes p {
+      font-size: 0.9rem;
+    }
+  }
+  
